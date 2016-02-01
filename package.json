@@ -12,6 +12,14 @@
   "keywords": [
     "scheduler"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumanmaity112/scheduler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sumanmaity112/scheduler/issues"
+  },
+  "homepage": "https://github.com/sumanmaity112/scheduler#readme",
   "author": "Suman Maity",
   "license": "ISC",
   "dependencies": {
