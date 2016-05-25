@@ -43,6 +43,16 @@ describe("start",function(){
 			done();
 		},3400);
 	});
+	it("throws a error if totalLimit is not already set",function(done){
+		var scheduler = new Scheduler();
+		this.timeout(3000);
+		setTimeout(function(){
+			assert.throws(function () {
+				scheduler.start(1000);
+			}, /Total limit is not already set. For more information, see readme.md/);
+			done();
+		},1500);
+	});
 	it("stop the scheduler when there is no job remaining",function(done){
 		var scheduler = new Scheduler();
 		this.timeout(7000);
@@ -58,7 +68,7 @@ describe("start",function(){
 			done();
 		},3400);
 	});
-	it("stop the scheduler when there is no reuest remaining",function(done){
+	it("stop the scheduler when there is no request remaining",function(done){
 		var scheduler = new Scheduler(5000);
 		this.timeout(17000);
 		scheduler.addLimit(2,1);		
@@ -82,5 +92,13 @@ describe("length",function(){
 		scheduler.addUrgentJob(891,function(){});
 		scheduler.addJob(839,function(){});
 		assert.equal(scheduler.length,5);
+	});
+});
+describe("addLimit",function(){
+	it("throws a error if totalLimit is not provided",function(){
+		var scheduler = new Scheduler();
+		assert.throws(function () {
+			scheduler.addLimit();
+		}, /Total limit is not provided. For more information, see readme.md/);
 	});
 });
