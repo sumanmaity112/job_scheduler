@@ -20,7 +20,7 @@
     "url": "https://github.com/sumanmaity112/scheduler/issues"
   },
   "homepage": "https://github.com/sumanmaity112/scheduler#readme",
-  "author": "Suman Maity",
+  "author": "suman.maity112",
   "license": "ISC",
   "dependencies": {
     "js-priority-queue": "^0.1.3"
