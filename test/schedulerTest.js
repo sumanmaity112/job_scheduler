@@ -1,4 +1,4 @@
-var Scheduler = require('../lib/scheduler.js');
+var Scheduler = require('../scheduler.js');
 var assert = require('assert');
 
 describe("addJob",function(){

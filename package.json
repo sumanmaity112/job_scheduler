@@ -1,8 +1,8 @@
 {
   "name": "job-scheduler",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "It can schedule a particular job",
-  "main": "lib/schedular.js",
+  "main": "scheduler.js",
   "directories": {
     "test": "test"
   },
@@ -19,6 +19,10 @@
   "bugs": {
     "url": "https://github.com/sumanmaity112/scheduler/issues"
   },
+  "files": [
+    "README.md",
+    "scheduler.js"
+  ],
   "homepage": "https://github.com/sumanmaity112/scheduler#readme",
   "author": {
     "name": "Suman Maity",
