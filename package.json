@@ -10,7 +10,7 @@
     "test": "mocha"
   },
   "keywords": [
-    "scheduler"
+    "scheduler","timer","job manager"
   ],
   "repository": {
     "type": "git",
