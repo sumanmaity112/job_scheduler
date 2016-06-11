@@ -1,6 +1,6 @@
 {
-  "name": "job-scheduler",
-  "version": "1.0.4",
+  "name": "job_scheduler",
+  "version": "1.0.0",
   "description": "It can schedule a particular job",
   "main": "scheduler.js",
   "directories": {
@@ -10,7 +10,9 @@
     "test": "mocha"
   },
   "keywords": [
-    "scheduler","timer","job manager"
+    "scheduler",
+    "timer",
+    "job manager"
   ],
   "repository": {
     "type": "git",
@@ -40,5 +42,6 @@
   },
   "devDependencies": {
     "mocha": "^2.4.5"
-  }
+  },
+  "readmeFilename": "README.md"
 }

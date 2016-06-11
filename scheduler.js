@@ -1,5 +1,5 @@
 var PriorityQueue = require('js-priority-queue');
-var Scheduler = function (startAfter) {
+module.exports = Scheduler = function (startAfter) {
     var pQueue = new PriorityQueue({
         comparator: function (firstItem, secondItem) {
             return secondItem.priority - firstItem.priority;
@@ -62,5 +62,3 @@ Scheduler.prototype = {
         clearInterval(this.timer);
     }
 };
-
-module.exports = Scheduler;
