@@ -21,25 +21,34 @@ module.exports = Scheduler = function (startAfter) {
         return pQueue.dequeue();
     };
     this.start = function (time) {
-        if(this.totalLimit===undefined)
+        if (this.totalLimit === undefined){
             throw new Error("Total limit is not already set. For more information, see readme.md");
+        }
         time = time || 500;
         var self = this;
         this.timer = setInterval(function () {
-            var topElement = getTopElement();
-            topElement.callBack();
-            updateRemainingLimit(topElement.priority, self);
-            self.length = pQueue.length;
-            if (self.totalLimit===0)
-                restartScheduler(self, time);
-            if (!pQueue.length)
-                self.stop();
+            if (pQueue.length) {
+                var topElement = getTopElement();
+                topElement.callBack(topElement.value);
+                updateRemainingLimit(topElement.priority, self);
+                self.length = pQueue.length;
+                if (!self.totalLimit){
+                    restartScheduler(self, time);
+                }
+                if (!pQueue.length){
+                    self.stop();
+                }
+            }
         }, time);
     };
     this.length = 0;
     this.addLimit = function (totalLimit, normalJobLimit) {
-        if(totalLimit===undefined)
+        if (totalLimit === undefined){
             throw new Error("Total limit is not provided. For more information, see readme.md");
+        }
+        if (normalJobLimit >= totalLimit) {
+            throw new Error("Check your entered value");
+        }
         this.totalLimit = totalLimit;
         this.normalJobLimit = normalJobLimit || 0;
         this.limit = {totalLimit: totalLimit, normalJobLimit: normalJobLimit};
