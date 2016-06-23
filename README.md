@@ -42,7 +42,6 @@
   
 ```
   ## API
-  ---
   #### new Scheduler([delay])
   ###### delay
   Type: `number` *(milliseconds)*
