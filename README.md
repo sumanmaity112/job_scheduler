@@ -1,6 +1,7 @@
 # scheduler
 
   It can schedule a particular job after certain amount of time depends on priority
+  
   ## Install 
     $ npm install job_scheduler
   ## Usage
@@ -45,7 +46,7 @@
   #### new Scheduler([delay])
   ###### delay
   Type: `number` *(milliseconds)*
-  Default: `3600000`
+  Default: `3600000 or an hour`
   
  `delay` holds the time in milliseconds indicates after how much time the scheduler will start.
   
