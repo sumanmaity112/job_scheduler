@@ -2,10 +2,7 @@
 
   It can schedule a particular job after certain amount of time depends on priority
   ## Install 
-    ---
-    ```
     $ npm install job_scheduler
-    ```
   ## Usage
   
   ```js
@@ -41,55 +38,66 @@
       });
   };
   main();
-  ```
   
+```
   ## API
   ---
   #### new Scheduler([delay])
   ###### delay
   Type: `number` *(milliseconds)*
-  Default: `3600000`<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `delay` holds the time in milliseconds indicates after how much time the scheduler will start.
+  Default: `3600000`
+  
+ `delay` holds the time in milliseconds indicates after how much time the scheduler will start.
   
   #### start([delay])
-  ###### delay
-    Type: `number` *(milliseconds)*
-    Default: `500`<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `delay` indicates the interval (seconds) between two job. It throws an error if limit is not already set.
-     
-  #### stop()<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Its stop the scheduler and remove all the task.
+**delay**
 
-  #### addJob(value,callback)<br/>
+Type: `number` *(milliseconds)*
+    
+Default: `500`
+    
+`delay` indicates the interval (seconds) between two job. It throws an error if limit is not already set.
+     
+  #### stop()
+Its stop the scheduler and remove all the task.
+
+  #### addJob(value,callback)
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Its add a normal/low priority job to scheduler.
   ##### value
-  Type: `number, object, string`<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `value` holds the value which will pass to callback function
+  Type: `number, object, string`
   
+  `value` holds the value which will pass to callback function
   ##### callback
-  Type: `function`<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `callback` is the function which will call with passed `value`
+  Type: `function`
+
+`callback` is the function which will call with passed `value`
   
-  #### addUrgentJob(value,callback)<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Its add a urgent/high priority job to scheduler.
-    ##### value
-    Type: `number, object, string`<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `value` holds the value which will pass to callback function
+  #### addUrgentJob(value,callback)
+ Its add a urgent/high priority job to scheduler.
+ 
+##### value
+   Type: `number, object, string`
+
+`value` holds the value which will pass to callback function
     
-    ##### callback
-    Type: `function`
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `callback` is the function which will call with passed `value`
+##### callback
+Type: `function`
+
+`callback` is the function which will call with passed `value`
 
   #### addLimit(totalNumberOfJob [, normalJobLimit])
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Its generate limit for the scheduler perform job in a certain time. It throws an error if totalNumberOfJob is not provided.
+ Its generate limit for the scheduler perform job in a certain time. It throws an error if totalNumberOfJob is not provided.
   
   ##### totalNumberOfJob
-  Type: `number`<br/>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Indicates the total number of job can completed by this scheduler
+  Type: `number`
+  
+ Indicates the total number of job can completed by this scheduler
   
   ##### normalJobLimit
-    Type: `number`
-    Default: `0`<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Indicates the maximum number of normal job can completed by this scheduler
+Type: `number`
 
-  <br/>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If number of job is greater than limit, it will not perform any job for some time and scheduler will auto restart after the same amount of time, passed when scheduler was created.*
+Default: `0`
+
+Indicates the maximum number of normal job can completed by this scheduler
+
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If number of job is greater than limit, it will not perform any job for some time and scheduler will auto restart after the same amount of time, passed when scheduler was created.*
