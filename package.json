@@ -12,7 +12,9 @@
   "keywords": [
     "scheduler",
     "timer",
-    "job manager"
+    "job manager",
+    "interval",
+    "job_scheduler"
   ],
   "repository": {
     "type": "git",
