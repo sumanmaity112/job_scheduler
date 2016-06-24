@@ -14,7 +14,14 @@
     "timer",
     "job manager",
     "interval",
-    "job_scheduler"
+    "job_scheduler",
+    "job scheduler",
+    "job",
+    "jobs",
+    "background",
+    "priority",
+    "queue",
+    "schedule"
   ],
   "repository": {
     "type": "git",
