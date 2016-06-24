@@ -57,7 +57,7 @@ Type: `number` *(milliseconds)*
     
 Default: `500`
     
-`delay` indicates the interval (seconds) between two job. It throws an error if limit is not already set.
+`delay` indicates the interval (milliseconds) between two job. It throws an error if limit is not already set.
  
 #### stop()
 Its stop the scheduler and remove all the task.
