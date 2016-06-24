@@ -1,6 +1,6 @@
 {
   "name": "job_scheduler",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "It can schedule a particular job",
   "main": "scheduler.js",
   "directories": {
