@@ -1,4 +1,4 @@
-# scheduler
+# job_scheduler
 
 It can schedule a particular job after certain amount of time depends on priority
   

@@ -25,16 +25,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sumanmaity112/scheduler.git"
+    "url": "git+https://github.com/sumanmaity112/job_scheduler.git"
   },
   "bugs": {
-    "url": "https://github.com/sumanmaity112/scheduler/issues"
+    "url": "https://github.com/sumanmaity112/job_scheduler/issues"
   },
   "files": [
     "README.md",
-    "scheduler.js"
+    "scheduler.js",
+    "job_scheduler_logo.svg"
   ],
-  "homepage": "https://github.com/sumanmaity112/scheduler#readme",
+  "homepage": "https://github.com/sumanmaity112/job_scheduler#readme",
   "author": {
     "name": "Suman Maity",
     "email": "suman.maity112@gmail.com"
